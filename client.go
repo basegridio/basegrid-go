@@ -10,7 +10,7 @@ import (
 )
 
 // BaseURL is the default API endpoint
-const BaseURL = "https://api.basegrid.io/v1"
+const BaseURL = "https://basegrid-production.up.railway.app/v1"
 
 // Client is the BaseGrid API client
 type Client struct {

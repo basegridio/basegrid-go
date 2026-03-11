@@ -48,7 +48,26 @@ func main() {
 }
 ```
 
+## Configuration
+
+```go
+client := basegrid.New("bg_your_api_key")
+// Default BaseURL: https://basegrid-production.up.railway.app/v1
+
+// Or customize:
+client.BaseURL = "https://your-custom-endpoint.com/v1"
+```
+
+## Troubleshooting
+
+### Connection Refused Error
+If you see connection refused errors, ensure you're using the latest SDK version:
+```bash
+go get -u github.com/basegrid-io/basegrid-go
+```
+
+Earlier versions may have used an incorrect default API endpoint.
+
 ## Documentation
 
 Full documentation: https://basegrid.io/docs
-# basegrid-go
