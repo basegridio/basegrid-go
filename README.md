@@ -52,10 +52,10 @@ func main() {
 
 ```go
 client := basegrid.New("bg_your_api_key")
-// Default BaseURL: https://basegrid-production.up.railway.app/v1
+// Default BaseURL: https://basegrid-production.up.railway.app
 
 // Or customize:
-client.BaseURL = "https://your-custom-endpoint.com/v1"
+client.BaseURL = "https://your-custom-endpoint.com"
 ```
 
 ## Troubleshooting
