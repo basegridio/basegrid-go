@@ -10,7 +10,7 @@ import (
 )
 
 // BaseURL is the default API endpoint
-const BaseURL = "https://basegrid-production.up.railway.app/v1"
+const BaseURL = "https://basegrid-production.up.railway.app"
 
 // Client is the BaseGrid API client
 type Client struct {
@@ -69,7 +69,7 @@ func (c *Client) Add(mem Memory) (*Memory, error) {
         return nil, err
     }
 
-    req, err := http.NewRequest("POST", c.BaseURL+"/memories", bytes.NewBuffer(body))
+    req, err := http.NewRequest("POST", c.BaseURL+"/v1/memories", bytes.NewBuffer(body))
     if err != nil {
         return nil, err
     }
@@ -105,7 +105,7 @@ func (c *Client) Search(params SearchParams) ([]SearchResult, error) {
         return nil, err
     }
 
-    req, err := http.NewRequest("POST", c.BaseURL+"/memories/search", bytes.NewBuffer(body))
+    req, err := http.NewRequest("POST", c.BaseURL+"/v1/memories/search", bytes.NewBuffer(body))
     if err != nil {
         return nil, err
     }
